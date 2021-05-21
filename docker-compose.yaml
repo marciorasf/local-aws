@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  localstack:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: aws_infra
+    restart: "no"
+    ports:
+      - 4900:4566
+    environment:
+      - SERVICES=sqs
+      - AWS_DEFAULT_REGION=sa-east-1
+      - DATA_DIR=/tmp/localstack/data
+    volumes:
+      - "localstack-volume:/tmp/localstack"
+
+volumes:
+  localstack-volume:
