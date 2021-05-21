@@ -10,7 +10,7 @@ services:
     ports:
       - 4900:4566
     environment:
-      - SERVICES=sqs
+      - SERVICES=sqs,s3
       - AWS_DEFAULT_REGION=sa-east-1
       - DATA_DIR=/tmp/localstack/data
     volumes:

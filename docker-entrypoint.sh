@@ -18,7 +18,7 @@ if [[ $SERVICES == *"sqs"* ]]; then
 fi
 
 if [[ $SERVICES == *"s3"* ]]; then
-  /bin/bash /usr/local/bin/init-scripts/sqs.sh
+  /bin/bash /usr/local/bin/init-scripts/s3.sh
 fi
 
 echo "-------------------- END INIT ------------------------"
